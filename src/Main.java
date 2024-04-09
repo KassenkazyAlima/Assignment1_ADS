@@ -170,28 +170,38 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string: ");
         String s = sc.next();
-        if(isAllDigits(s))
-            System.out.println("yes");
-        else
-            System.out.println("no");
-    }
-    private static boolean isAllDigits(String s){
-
+//        if(isAllDigits(s))
+//            System.out.println("yes");
+//        else
+//            System.out.println("no");
+//    }
+//    private static boolean isAllDigits(String s){
+//
     }
     public static void task9() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers: ");
         int n = sc.nextInt();
         int k = sc.nextInt();
-        System.out.println(fibonacci(n));
+        System.out.println(binomialCoef(n,k));
     }
     private static int binomialCoef(int n, int k){
-        if(k ==0)
+        if(k ==0 || k == n)
+            return 1;
+        return binomialCoef(n-1,k-1) + binomialCoef(n-1,k);
     }
     public static void task10() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        int n = sc.nextInt();
-        System.out.println(fibonacci(n));
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(gcdOfNums(a,b));
+    }
+    private static int gcdOfNums(int a, int b){
+        if(b==0)
+            return a;
+        return gcdOfNums(b, a%b);
+
     }
 }
