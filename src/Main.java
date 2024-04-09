@@ -82,7 +82,7 @@ public class Main {
     Time complexity: O(n), where n is the input number.
     Result in linear time complexity
     @param- n, the size of elements in the array
-    @return - minimum num of elements
+    @return - minimum num of elements.
      */
     public static void task1() {
         Scanner sc = new Scanner(System.in);
