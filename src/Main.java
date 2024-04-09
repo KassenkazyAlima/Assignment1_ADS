@@ -91,8 +91,8 @@ public class Main {
     This method calculates the average number of elements in an array by finding the sum and divide to number of elements.
     Time complexity: O(n), where n is the input number.
     Result in linear time complexity
-    @param- n, the size of elements in the array
-    @return - minimum num of elements
+    @param we can consider n as the parameter which is the size of elements in the array.
+    @return - average of the elements
      */
     public static void task2() {
         Scanner sc = new Scanner(System.in);
@@ -110,15 +110,25 @@ public class Main {
         double avg = (double) sum / n;
 
         System.out.println("The avegrage of numbers is: " + avg );
+        System.out.println("Time taken: ");
     }
+    /*
+   Problem 3
+   This method recursively checks if a number is prime.
+   Time complexity: O(sqrt(n)), where n is the input number.
+   @param- n, the number to be checked for primality.
+   @return - the result of boolean checking, is prime or is not prime
+    */
     public static void task3(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int n = sc.nextInt();
         if(isPrime(n,2))
-            System.out.println(n + " is prime");
+            System.out.println(n + " is prime number. ");
         else
-            System.out.println(n + " is not prime");
+            System.out.println(n + " is not prime number. ");
+
+        System.out.println("Time taken: ");
     }
 
     private static boolean isPrime(int n, int i){
@@ -130,29 +140,53 @@ public class Main {
             return true;
         return isPrime(n,i+1);
     }
+    /*
+   Problem 4
+   This method recursively calculates the factorial of the number.
+   Time complexity: O(n), where n is the input number.
+   Result in linear time complexity
+   @param- n, the number that the factorial will be calculated
+   @return - factorial of the number
+    */
     public static void task4() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int n = sc.nextInt();
         int result = factorial(n);
         System.out.println(result);
+        System.out.println("Time taken: ");
     }
     private static int factorial(int n){
         if (n<=1)
             return 1;
         return factorial(n-1) * n;
     }
+    /*
+   Problem 5
+   This method recursively calculates the fibonacci number at the given position
+   Time complexity: O(2^n), where n is the input number.
+   @param- n, the position
+   @return - n-th element of fibonacci sequence.
+    */
     public static void task5() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int n = sc.nextInt();
         System.out.println(fibonacci(n));
+        System.out.println("Time taken: ");
     }
     private static int fibonacci(int n){
         if(n<=1)
             return n;
         return fibonacci(n-1) + fibonacci(n-2);
     }
+    /*
+   Problem 6
+   This method recursively calculates the power of a number
+   Time complexity: O(n), where n is the input number and the exponent.
+   @param- a and n, the base and the exponent
+   @return - a power of n
+    */
     public static void task6() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
@@ -160,12 +194,21 @@ public class Main {
         System.out.println("Enter the exponent: ");
         int n = sc.nextInt();
         System.out.println(power(a, n));
+        System.out.println("Time taken: ");
     }
     private static int power(int a,int n){
         if(n == 0)
             return 1;
         return a * power(a, n-1);
     }
+    /*
+   Problem 7
+   This method reverses the array recursively
+   Time complexity: O(n), where n is the input number.
+   Result in linear time complexity
+   @param- arr (Array that will be reversed), start and end are used for indicating the range
+   @return - reversed array
+    */
     public static void task7() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of element in the array: ");
@@ -176,11 +219,12 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         reverseArray(arr,0,n-1);
-        System.out.println("Reversed array : ");
+        System.out.println("Reversed array : " );
         for(int num : arr){
-            System.out.println(num + " ");
+            System.out.print(num + " ");
         }
-        System.out.println();
+        System.out.println(" ");
+        System.out.println("Time taken: ");
     }
     private static void reverseArray(int[] arr, int start,int end){
         if(start>=end)
@@ -190,6 +234,14 @@ public class Main {
         arr[end] = temp;
         reverseArray(arr,start+1,end-1);
     }
+    /*
+   Problem 8
+   This method recursively check if a string consists of digits or not.
+   Time complexity: O(n), where n is the input number.
+   Result in linear time complexity
+   @param String s, consisted of elements, could be digits or letters and so on
+   @return - yes or no
+    */
     public static void task8() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string: ");
@@ -198,6 +250,7 @@ public class Main {
             System.out.println("YES");
         else
             System.out.println("NO");
+        System.out.println("Time taken: ");
     }
     private static boolean isAllDigits(String s){
         if(s.isEmpty())
@@ -207,18 +260,33 @@ public class Main {
         return isAllDigits(s.substring(1));
 
     }
+    /*
+   Problem 9
+   This method recursively calculates the binomial coefficient.
+   Time complexity: O(2^n), where n is the input number.
+   @param n and k, values used to calculate the binomial coefficient.
+   @return - result of binomial coefficient
+    */
     public static void task9() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers: ");
         int n = sc.nextInt();
         int k = sc.nextInt();
         System.out.println(binomialCoef(n,k));
+        System.out.println("Time taken: ");
     }
     private static int binomialCoef(int n, int k){
         if(k ==0 || k == n)
             return 1;
         return binomialCoef(n-1,k-1) + binomialCoef(n-1,k);
     }
+    /*
+   Problem 10
+   This method recursively calculates the GCD using the Euclidean Algorithm.
+   Time complexity: O(log(min(a,b), where a and b are the input numbers.
+   @param a and b, which are the two numbers for GCD calculation
+   @return - GCD of two numbers
+    */
     public static void task10() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
@@ -226,6 +294,7 @@ public class Main {
         int b = sc.nextInt();
 
         System.out.println(gcdOfNums(a,b));
+        System.out.println("Time taken: ");
     }
     private static int gcdOfNums(int a, int b){
         if(b==0)
