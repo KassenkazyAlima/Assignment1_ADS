@@ -80,7 +80,7 @@ public class Main {
     Problem 1
     This method finds the minimum element of an array by iterating through the array that user will input.
     Time complexity: O(n), where n is the input number.
-    Result in linear time complexity
+    Result in linear time complexity. As the size of input increases, the time taken increases linearly.
     @param- n, the size of elements in the array
     @return - minimum num of elements.
      */
@@ -110,7 +110,7 @@ public class Main {
     Problem 2
     This method calculates the average number of elements in an array by finding the sum and divide to number of elements.
     Time complexity: O(n), where n is the input number.
-    Result in linear time complexity
+    Result in linear time complexity. As the size of input increases, the time taken increases linearly.
     @param we can consider n as the parameter which is the size of elements in the array.
     @return - average of the elements
      */
@@ -135,6 +135,7 @@ public class Main {
    Problem 3
    This method recursively checks if a number is prime.
    Time complexity: O(sqrt(n)), where n is the input number.
+   As the size of input increases, the time taken increases to most sqrt(n).
    @param- n, the number to be checked for primality.
    @return - the result of boolean checking, is prime or is not prime
     */
@@ -162,7 +163,7 @@ public class Main {
    Problem 4
    This method recursively calculates the factorial of the number.
    Time complexity: O(n), where n is the input number.
-   Result in linear time complexity
+   Result in linear time complexity. As the size of input increases, the time taken increases linearly.
    @param- n, the number that the factorial will be calculated
    @return - factorial of the number
     */
@@ -182,6 +183,7 @@ public class Main {
    Problem 5
    This method recursively calculates the fibonacci number at the given position
    Time complexity: O(2^n), where n is the input number.
+   As the size of input increases, the time grows exponentially.
    @param- n, the position
    @return - n-th element of fibonacci sequence.
     */
@@ -200,6 +202,7 @@ public class Main {
    Problem 6
    This method recursively calculates the power of a number
    Time complexity: O(n), where n is the input number and the exponent.
+   As the size of input increases, the time taken increases linearly.
    @param- a and n, the base and the exponent
    @return - a power of n
     */
@@ -220,7 +223,7 @@ public class Main {
    Problem 7
    This method reverses the array recursively
    Time complexity: O(n), where n is the input number.
-   Result in linear time complexity
+   Result in linear time complexity. As the size of input increases, the time taken increases linearly.
    @param- arr (Array that will be reversed), start and end are used for indicating the range
    @return - reversed array
     */
@@ -252,7 +255,7 @@ public class Main {
    Problem 8
    This method recursively check if a string consists of digits or not.
    Time complexity: O(n), where n is the input number.
-   Result in linear time complexity
+   Result in linear time complexity.As the size of input increases, the time taken increases linearly.
    @param String s, consisted of elements, could be digits or letters and so on
    @return - yes or no
     */
@@ -277,6 +280,7 @@ public class Main {
    Problem 9
    This method recursively calculates the binomial coefficient.
    Time complexity: O(2^n), where n is the input number.
+   As the size of input increases, the time taken increases exponentially.
    @param n and k, values used to calculate the binomial coefficient.
    @return - result of binomial coefficient
     */
@@ -296,6 +300,7 @@ public class Main {
    Problem 10
    This method recursively calculates the GCD using the Euclidean Algorithm.
    Time complexity: O(log(min(a,b), where a and b are the input numbers.
+   As the size of input increases, the time taken increases logarithmically.
    @param a and b, which are the two numbers for GCD calculation
    @return - GCD of two numbers
     */
