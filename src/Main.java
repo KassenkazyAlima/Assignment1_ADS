@@ -7,53 +7,74 @@ public class Main {
 
         System.out.println("Enter the number of task that you want to see (out of 10): ");
         int taskNum = sc.nextInt();
-//      long startTime = System.nanoTime();
+        long startTime = 0, endTime = 0;
 
         switch (taskNum) {
             case 1:
                 System.out.println("User should input a number “n” and an array of “n” elements, and the function returns minimum of them.");
+                startTime = System.currentTimeMillis();
                 task1();
+                endTime = System.currentTimeMillis();
                 break;
             case 2:
                 System.out.println("User should input a number “n” and an array of “n” elements, and the function calculates the average of the numbers.");
+                startTime = System.currentTimeMillis();
                 task2();
+                endTime = System.currentTimeMillis();
                 break;
             case 3:
                 System.out.println("User should input a number “n”, and the function checks whether it is prime or not.");
+                startTime = System.currentTimeMillis();
                 task3();
+                endTime = System.currentTimeMillis();
                 break;
             case 4:
                 System.out.println("User should input a number “n”, and the function returns factorial of it.");
+                startTime = System.currentTimeMillis();
                 task4();
+                endTime = System.currentTimeMillis();
                 break;
             case 5:
                 System.out.println("User should input a number “n”, and the function returns n-th element in Fibonacci sequence using recursion.");
+                startTime = System.currentTimeMillis();
                 task5();
+                endTime = System.currentTimeMillis();
                 break;
             case 6:
                 System.out.println("User should input numbers “n” and “a”, and the function returns a to power of n.");
+                startTime = System.currentTimeMillis();
                 task6();
+                endTime = System.currentTimeMillis();
                 break;
             case 7:
                 System.out.println("User should input numbers “n” and an array of “n” elements, and the function returns the given array in reverse order without using array data structure.");
+                startTime = System.currentTimeMillis();
                 task7();
+                endTime = System.currentTimeMillis();
                 break;
             case 8:
                 System.out.println("User should input a string “s”, and the function checks whether s is all consist of digits.");
+                startTime = System.currentTimeMillis();
                 task8();
+                endTime = System.currentTimeMillis();
                 break;
             case 9:
                 System.out.println("User should input numbers “n” and “k”, and the function calculates the binomial coefficient using the particular formula.");
+                startTime = System.currentTimeMillis();
                 task9();
+                endTime = System.currentTimeMillis();
                 break;
             case 10:
                 System.out.println("User should input numbers “a” and “b”, and the function returns the GCD(a,b).");
+                startTime = System.currentTimeMillis();
                 task10();
+                endTime = System.currentTimeMillis();
                 break;
             default:
                 System.out.println("Invalid Input, please enter number from 1 to 10. ");
-
         }
+        long elapsedTime = endTime - startTime;
+        System.out.println("Time taken: " + elapsedTime + " milliseconds");
     }
     /*
     Problem 1
@@ -76,7 +97,6 @@ public class Main {
         int min = arr[0];
         min = findMin(arr, n, min);
         System.out.println("Minimum element is: " + findMin(arr, n, min));
-        System.out.println("Time taken: ");
     }
     private static int findMin(int[] arr, int n, int min) {
         for (int i = 1; i < n; i++) {
@@ -110,7 +130,6 @@ public class Main {
         double avg = (double) sum / n;
 
         System.out.println("The avegrage of numbers is: " + avg );
-        System.out.println("Time taken: ");
     }
     /*
    Problem 3
@@ -128,7 +147,6 @@ public class Main {
         else
             System.out.println(n + " is not prime number. ");
 
-        System.out.println("Time taken: ");
     }
 
     private static boolean isPrime(int n, int i){
@@ -154,7 +172,6 @@ public class Main {
         int n = sc.nextInt();
         int result = factorial(n);
         System.out.println(result);
-        System.out.println("Time taken: ");
     }
     private static int factorial(int n){
         if (n<=1)
@@ -173,7 +190,6 @@ public class Main {
         System.out.println("Enter a number: ");
         int n = sc.nextInt();
         System.out.println(fibonacci(n));
-        System.out.println("Time taken: ");
     }
     private static int fibonacci(int n){
         if(n<=1)
@@ -194,7 +210,6 @@ public class Main {
         System.out.println("Enter the exponent: ");
         int n = sc.nextInt();
         System.out.println(power(a, n));
-        System.out.println("Time taken: ");
     }
     private static int power(int a,int n){
         if(n == 0)
@@ -224,7 +239,6 @@ public class Main {
             System.out.print(num + " ");
         }
         System.out.println(" ");
-        System.out.println("Time taken: ");
     }
     private static void reverseArray(int[] arr, int start,int end){
         if(start>=end)
@@ -250,7 +264,6 @@ public class Main {
             System.out.println("YES");
         else
             System.out.println("NO");
-        System.out.println("Time taken: ");
     }
     private static boolean isAllDigits(String s){
         if(s.isEmpty())
@@ -273,7 +286,6 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
         System.out.println(binomialCoef(n,k));
-        System.out.println("Time taken: ");
     }
     private static int binomialCoef(int n, int k){
         if(k ==0 || k == n)
@@ -294,7 +306,6 @@ public class Main {
         int b = sc.nextInt();
 
         System.out.println(gcdOfNums(a,b));
-        System.out.println("Time taken: ");
     }
     private static int gcdOfNums(int a, int b){
         if(b==0)
