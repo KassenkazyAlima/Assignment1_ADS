@@ -32,11 +32,11 @@ Responsible for calculating the factorial of a given number.
 It calls the factorial() method to calculate the factorial of the input number.
 This method calculates the factorial of a given number recursively.
 Base Case: If the input number is less than or equal to 1, the factorial is 1.
-Recursive Step: If the input number is greater than 1, the method calls itself recursively with the argument (n - 1) and multiplies the result with the current value of n.
+Recursive Step: If the input number is greater than 1, the method calls itself recursively with the argument (n-1) and multiplies the result with the current value of n.
 
 
 task5()
-Responsible for calculating the Fibonacci number at a given position. It uses the Fibonacci () method to calculate the Fibonacci number at the given position. If the input position is 0 or 1, the Fibonacci number is equal to the position itself (0 or 1). If the input position is greater than 1, the method calls itself recursively with the arguments `(n - 1)` and `(n - 2)` and returns the sum of the two Fibonacci numbers.
+Responsible for calculating the Fibonacci number at a given position. It uses the Fibonacci () method to calculate the Fibonacci number at the given position. If the input position is 0 or 1, the Fibonacci number is equal to the position itself (0 or 1). If the input position is greater than 1, the method calls itself recursively with the arguments (n-1) and (n-2) and returns the sum of the two Fibonacci numbers.
 
 
 task6()
