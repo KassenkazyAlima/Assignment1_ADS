@@ -199,7 +199,7 @@ public class Main {
         return fibonacci(n-1) + fibonacci(n-2);
     }
     /*
-   Problem 6
+   Problem 6:
    This method recursively calculates the power of a number
    Time complexity: O(n), where n is the input number and the exponent.
    As the size of input increases, the time taken increases linearly.
