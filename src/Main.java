@@ -64,12 +64,12 @@ public class Main {
                 task9();
                 endTime = System.currentTimeMillis();
                 break;
-            case 10:
-                System.out.println("User should input numbers “a” and “b”, and the function returns the GCD(a,b).");
-                startTime = System.currentTimeMillis();
-                task10();
-                endTime = System.currentTimeMillis();
-                break;
+//            case 10:
+//                System.out.println("User should input numbers “a” and “b”, and the function returns the GCD(a,b).");
+//                startTime = System.currentTimeMillis();
+//                task10();
+//                endTime = System.currentTimeMillis();
+//                break;
             default:
                 System.out.println("Invalid Input, please enter number from 1 to 10. ");
         }
@@ -304,18 +304,5 @@ public class Main {
    @param a and b, which are the two numbers for GCD calculation
    @return - GCD of two numbers
     */
-    public static void task10() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
 
-        System.out.println(gcdOfNums(a,b));
-    }
-    private static int gcdOfNums(int a, int b){
-        if(b==0)
-            return a;
-        return gcdOfNums(b, a%b);
-
-    }
 }
