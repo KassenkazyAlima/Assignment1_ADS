@@ -40,7 +40,7 @@ Responsible for calculating the Fibonacci number at a given position. It uses th
 
 
 task6()
-Responsible for calculating the power of a number. It calls the `power()` method to calculate the result of raising the base number to the exponent. If the exponent is 0, the result is 1.
+Responsible for calculating the power of a number. It calls the power() method to calculate the result of raising the base number to the exponent. If the exponent is 0, the result is 1.
 If the exponent is greater than 0, the method recursively calls itself with the exponent decremented by 1 until the exponent becomes 0.
 
 
