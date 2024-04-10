@@ -225,7 +225,7 @@ public class Main {
    Time complexity: O(n), where n is the input number.
    Result in linear time complexity. As the size of input increases, the time taken increases linearly.
    @param- arr (Array that will be reversed), start and end are used for indicating the range
-   @return - reversed array
+   @return - reversed array.
     */
     public static void task7() {
         Scanner sc = new Scanner(System.in);
